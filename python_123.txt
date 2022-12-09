@@ -1,0 +1,14 @@
+name=["Sakshi","Arushi","kiran","Ayushi","shivanshi"] 
+marks=[19,21,19,21,20] 
+update=[36,45,32,39,42] 
+n=len(marks) 
+x=[[0 for j in range(3)]for i in range(n)] 
+for i in range(n): 
+    x[i][0]=name[i] 
+    x[i][1]=marks[i]+update[i] 
+    x[i][2]=i+1 
+highest=x[0] 
+for j in range(1,n): 
+    if (x[j][1]>=highest[1]): 
+        highest=x[j] 
+        print("name:",highest[0],"jump:",abs(highest[2]-1),sep="")
